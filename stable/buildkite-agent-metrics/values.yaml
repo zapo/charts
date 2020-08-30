@@ -9,3 +9,5 @@ agent:
 
   # The name of the stackdriver project
   stackdriver_projectid: ""
+
+  image: zipolupu/buildkite-agent-metrics

@@ -1,29 +1,29 @@
-apiVersion: {{ template "deployment.apiVersion" . }}
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ template "fullname" . }}
+  name: buildkite-agent-metrics
   labels:
-    app: {{ template "name" . }}
+    app: buildkite-agent-metrics
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ template "name" . }}
+      app: buildkite-agent-metrics
   template:
     metadata:
       labels:
-        app: {{ template "name" . }}
+        app: buildkite-agent-metrics
         release: {{ .Release.Name }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: myobplatform/buildkite-metrics
-          command:
-            - -interval {{ .Values.agent.interval | quote }}
-            - -token {{ .Values.agent.token | b64enc | quote }}
+          image: {{ .Values.agent.image }}
+          args:
+            - -interval={{ .Values.agent.interval }}
+            - -token={{ .Values.agent.token }}
           {{- if .Values.agent.stackdriver_projectid }}
-            - -backend stackdriver
-            - -stackdriver-projectid {{ .Values.agent.stackdriver_projectid | quote }}
+            - -backend=stackdriver
+            - -stackdriver-projectid={{ .Values.agent.stackdriver_projectid }}
           {{- end }}
