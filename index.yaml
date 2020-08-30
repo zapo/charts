@@ -3,9 +3,9 @@ entries:
   buildkite-agent-metrics:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-08-30T12:17:31.893575697Z"
+    created: "2020-08-30T12:22:23.408297208Z"
     description: A Helm chart for Kubernetes
-    digest: 59aeefadb4bac8d6868d56bc6d14472aa72286d8fcf50ecd989a13e774a136c5
+    digest: d4f9650379efd109b1f40dde81cbf4dc8c706b5dd1f8071a8ce90cac30e3750d
     name: buildkite-agent-metrics
     type: application
     urls:
@@ -14,12 +14,12 @@ entries:
   k8s-stackdriver:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-08-30T12:17:31.893737065Z"
+    created: "2020-08-30T12:22:23.408476379Z"
     description: A Helm chart for Kubernetes
-    digest: b8751c49c0cb0e9f00b658f0e769bdd9d8d517307db51be2c1fe9665244fe322
+    digest: 877f6802c1106db0caebf1c6ddd483ce1c560f2f754db62c77dd788071425ffc
     name: k8s-stackdriver
     type: application
     urls:
     - https://zapo.github.io/charts/k8s-stackdriver-0.1.0.tgz
     version: 0.1.0
-generated: "2020-08-30T12:17:31.893252586Z"
+generated: "2020-08-30T12:22:23.407963361Z"
