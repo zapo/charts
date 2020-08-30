@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  k8s-stackdriver:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-08-30T11:42:37.481425634Z"
+    description: A Helm chart for Kubernetes
+    digest: 3f2b41d83008c1b5fd48687c6885aa5f3cc906fe48deab2b1328c5484765cac9
+    name: k8s-stackdriver
+    type: application
+    urls:
+    - https://zapo.github.io/charts/k8s-stackdriver-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-08-30T11:42:37.481094607Z"
