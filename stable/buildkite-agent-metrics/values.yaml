@@ -1,13 +1,14 @@
 replicaCount: 1
 
-# Buildkite Agent settings
-agent:
-  # Your Buildkite agent token, it must be set
-  token: ""
-  # Metrics update interval
-  interval: "30s"
+# Your Buildkite agent token, it must be set
+token: ""
+# Metrics update interval
+interval: "30s"
 
-  # The name of the stackdriver project
-  stackdriver_projectid: ""
+# The name of the stackdriver project
+stackdriverProjectID: ""
 
-  image: zipolupu/buildkite-agent-metrics
+image: zipolupu/buildkite-agent-metrics
+
+# Service account to use
+serviceAccount: ""

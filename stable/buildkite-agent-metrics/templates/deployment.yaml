@@ -17,13 +17,14 @@ spec:
         app: buildkite-agent-metrics
         release: {{ .Release.Name }}
     spec:
+      serviceAccount: {{ .Values.serviceAccount }}
       containers:
         - name: {{ .Chart.Name }}
-          image: {{ .Values.agent.image }}
+          image: {{ .Values.image }}
           args:
-            - -interval={{ .Values.agent.interval }}
-            - -token={{ .Values.agent.token }}
-          {{- if .Values.agent.stackdriver_projectid }}
+            - -interval={{ .Values.interval }}
+            - -token={{ .Values.token }}
+          {{- if .Values.stackdriverProjectID }}
             - -backend=stackdriver
-            - -stackdriver-projectid={{ .Values.agent.stackdriver_projectid }}
+            - -stackdriver-projectid={{ .Values.stackdriverProjectID }}
           {{- end }}
